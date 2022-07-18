@@ -1,0 +1,23 @@
+{
+    "seed": 0,
+    "max_epochs": 100,
+    "save_path": "/path/to/results",
+    "lr": 1e-4,
+    "scheduler_decay_rate": 0.8,
+    "scheduler_patience": 5,
+    "data_path": "/path/to/patch_features",
+    "csv_path": "/path/to/bright_all_labels.csv",
+    "split_path": "/path/to/split_train_val_test.csv",
+    "label_col": "type",
+    "low_mag": "1.25x",
+    "mid_mag": "2.5x",
+    "high_mag": "10.0x",
+    "is_weighted_sampler": true,
+    "num_workers": 8,
+    "n_cls": 3,
+    "k_sample": 12,
+    "k_sigma": 0.002,
+    "drop_out": 0.25,
+    "in_feat_dim": 1024,
+    "save_metric": "f1"
+}
