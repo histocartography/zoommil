@@ -1,7 +1,7 @@
 # ZoomMIL
 
 ZoomMIL is a multiple instance learning (MIL) method that learns to perform multi-level zooming for efficient Whole-Slide Image (WSI) classification. 
-This repository contains the code to reproduce the results of our corresponding paper [Differentiable Zooming for Multiple Instance Learning on Whole-Slide Images](https://arxiv.org/pdf/2204.12454.pdf).
+This repository contains the PyTorch code to reproduce the results of our corresponding paper [Differentiable Zooming for Multiple Instance Learning on Whole-Slide Images](https://arxiv.org/pdf/2204.12454.pdf).
 
 ## Overview
 ![](fig/overview.png)
@@ -26,12 +26,19 @@ conda env create -f environment.yml
 conda activate zoommil
 ```
 
-Install the remaining packages:
+Install pytorch:
 
 ```
 conda install -n zoommil pytorch==1.10.1 torchvision==0.11.2 cudatoolkit=11.1 -c pytorch -c conda-forge
+```
+
+Preprocessing also requires the `OpenSlide` library. On Linux, you can install it with
+
+```
 conda install -n zoommil -c conda-forge conda-forge/linux-64::openslide-python
 ```
+
+Please check the [documentation](https://openslide.org/api/python/#installing) for more information.
 
 ## Getting started
 
@@ -52,7 +59,7 @@ We evaluated ZoomMIL on three publicly available datasets:
     
 - **CAMELYON16**: 
     - 399 Breast WSIs with normal and metastatic cases
-    - Data: https://camelyon17.grand-challenge.org/Data/ (contains images from both CAMELYON16 and CAMELYON17)
+    - Data: https://camelyon17.grand-challenge.org/Data/ (provides images from both CAMELYON16 and CAMELYON17)
 
 The train/val/test splits for all datasets can be found [here](https://ibm.box.com/s/ejjgh5699q9gs76cm4fp2kffru24pd0t).
 
@@ -80,10 +87,10 @@ python bin/train.py --config_path zoommil/config/sample_config.json
 If you use this code, please consider citing our work:
 
 ```
-@article{thandiackal2022zoommil,
+@inproceedings{thandiackal2022zoommil,
   title={Differentiable Zooming for Multiple Instance Learning on Whole-Slide Images},
   author={Thandiackal, Kevin and Chen, Boqi and Pati, Pushpak and Jaume, Guillaume and Williamson, Drew FK and Gabrani, Maria and Goksel, Orcun},
-  journal={arXiv preprint arXiv:2204.12454},
+  booktitle = {The European Conference on Computer Vision (ECCV)},
   year={2022}
 }
 ```
