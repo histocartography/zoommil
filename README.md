@@ -61,7 +61,7 @@ We evaluated ZoomMIL on three publicly available datasets:
     - 399 Breast WSIs with normal and metastatic cases
     - Data: https://camelyon17.grand-challenge.org/Data/ (provides images from both CAMELYON16 and CAMELYON17)
 
-The train/val/test splits for all datasets can be found [here](https://ibm.box.com/s/ejjgh5699q9gs76cm4fp2kffru24pd0t).
+The train/val/test splits for all datasets can be found [here](https://ibm.box.com/s/w6u4c8m0ms9ecm0ilyguqlwh4ynnix9m).
 
 ### Preprocessing
 Whole-slide images (e.g., from the BRIGHT dataset) can be preprocessed (tissue masking + patch feature extraction) as .h5 files:
